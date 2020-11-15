@@ -2,7 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <cmath>
-
+#include <string>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
   inputFileFS.open(inputFile);
   while(inputFileFS >> checkWord){
 	  if(checkWord.at(checkWord.size()-2) =='\''  ){
-      userNameList.push_back(checkWord);
+      userNameList.push_back(checkWord.substr(0,checkWord.size()-2));
     }
   }
 
