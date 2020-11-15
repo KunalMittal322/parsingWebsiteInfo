@@ -13,11 +13,12 @@ int main(int argc, char *argv[]) {
   ifstream inputFileFS;
   string checkWord;  
   vector<string> userNameList;
-
+  
 
   inputFileFS.open(inputFile);
   while(inputFileFS >> checkWord){
-	  if(checkWord.at(checkWord.size()-2) =='\''  ){
+	  if(checkWord.at(checkWord.size()-2) =='\'' && checkWord.size() > 2){
+      //cout << checkWord.substr(0,checkWord.size()-2) << endl;
       userNameList.push_back(checkWord.substr(0,checkWord.size()-2));
     }
   }
