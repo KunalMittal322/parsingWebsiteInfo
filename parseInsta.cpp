@@ -17,8 +17,8 @@ int main(int argc, char *argv[]) {
 
   inputFileFS.open(inputFile);
   while(inputFileFS >> checkWord){
-	  if(checkWord.at(checkWord.size()-2)=="\'"){
-      userNameList.push_back(checkWord))
+	  if(checkWord.at(checkWord.size()-2)=="'"){
+      userNameList.push_back(checkWord);
     }
   }
 
