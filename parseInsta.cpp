@@ -17,8 +17,7 @@ int main(int argc, char *argv[]) {
 
   inputFileFS.open(inputFile);
   while(inputFileFS >> checkWord){
-	  if(checkWord.at(checkWord.size()-2) =='\'' && checkWord.size() > 2){
-      //cout << checkWord.substr(0,checkWord.size()-2) << endl;
+	  if(checkWord.size() > 2 && checkWord.at(checkWord.size()-2) =='\'' ){
       userNameList.push_back(checkWord.substr(0,checkWord.size()-2));
     }
   }
